@@ -10,8 +10,11 @@
     <h1 id="bigTitle">トップページ</h1>
     <div id="userinfo">
         <div id="username">ログイン中のユーザ　<br />
-        田中　太郎 </div>
-        <button id="logout" type="submit"><a href="./index.html">ログアウト</a></button>
+        田中　太郎
+        <c:out value="${sessionScope.login_user.user_name}" />
+                    &nbsp;さん&nbsp;&nbsp;&nbsp;
+        </div>
+        <button id="logout" type="submit"><a href="${pageContext.request.contextPath}/logout">ログアウト</a></button>
     </div>
     </header>
 
@@ -27,11 +30,11 @@
         <div class="choice">
                 <div class="talk">
                     <img src="images/talk.png" alt="" width="300" height="300"><br />
-                    <a class="button" id="talk"  href="./talk.html">雑談</a>
+                    <a class="button" id="talk"  href="${pageContext.request.contextPath}/talk">雑談</a>
                 </div>
                 <div class="question">
                     <img src="images/question.png" alt=""   width="300" height="300"><br />
-                    <a class="button" id="question" href="./question.html">相談</a>
+                    <a class="button" id="question" href="${pageContext.request.contextPath}/question">相談</a>
                 </div>
         </div>
     </div>
