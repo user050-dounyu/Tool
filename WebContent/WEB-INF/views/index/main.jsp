@@ -10,7 +10,7 @@
     <h1 id="bigTitle">トップページ</h1>
     <div id="userinfo">
         <div id="username">ログイン中のユーザ　<br />
-        田中　太郎
+
         <c:out value="${sessionScope.login_user.user_name}" />
                     &nbsp;さん&nbsp;&nbsp;&nbsp;
         </div>
