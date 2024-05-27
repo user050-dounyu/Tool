@@ -66,7 +66,9 @@ public class LoginServlet extends HttpServlet {
 
         }catch(NullPointerException e){
 
-        e.printStackTrace();
+            RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/err.jsp");
+            rd.forward(request, response);
+            e.printStackTrace();
         }catch(NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
