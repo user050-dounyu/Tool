@@ -1,19 +1,25 @@
 @charset "UTF-8";
+
 header{
-    background-color: blue;
-    background: url(../images/systems_header.jpg) no-repeat 0 0 /cover;
-    background-position: center center;
-    height:170px;
+    background: linear-gradient(to left, #003399, #00B3FE);
+    height:100px;
     width:100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #bigTitle{
-    color : #ff8040;
+    color : white;
     float:left;
     margin-left:10px;
+    width:50%;
+    padding:  2%;
 }
 
+
+
 #userinfo{
+    width:50%;
     float:right;
     display: flex;
     align-items:center;
@@ -22,15 +28,19 @@ header{
 
 #username{
     margin-right:100px;
+    color:white;
 }
 
 #wrapper{
     overflow: hidden;
     display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin-top:50px;
 }
 
 .bookmark{
-    width:20%;
+    width:30%;
 }
 
 .title{
@@ -50,6 +60,7 @@ header{
 }
 
 .choice{
+    width:70%;
     flex-direction:row;
     flex-grow:1;
     display:flex;
