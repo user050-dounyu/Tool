@@ -8,5 +8,9 @@
     <body>
         <p>エラーでした。<p>
 
+        <form method="GET" action="${pageContext.request.contextPath}/">
+            <button type="submit">戻る</button>
+        </form>
+
     </body>
 </html>

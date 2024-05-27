@@ -51,15 +51,18 @@ public class LoginServlet extends HttpServlet {
                 byte[] hashBytes = md.digest();
                 String hash = Base64.getEncoder().encodeToString(hashBytes);
 
-                if(lu.getPassword() != hash || lu.getUser_id() == null) {
+                if(lu.getPassword().equals(hash)) {
+                    request.getSession().setAttribute("user_id", lu.getUser_id());
+                    request.getSession().setAttribute("user_name", lu.getUser_name());
+                    request.getSession().setAttribute("auth_id", lu.getAuth_id());
+                    request.setAttribute("_token", request.getSession().getId());
+
+                    RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/main.jsp");
+                    rd.forward(request, response);
+                }else {
                     RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/err.jsp");
                     rd.forward(request, response);
                 }
-
-                request.getSession().setAttribute("user_id", lu.getUser_id());
-
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/main.jsp");
-                rd.forward(request, response);
 
         }catch(NullPointerException e){
 

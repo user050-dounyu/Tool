@@ -9,19 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.loginUser;
-
 /**
- * Servlet implementation class IndexServlet
+ * Servlet implementation class NewUserServlet
  */
-@WebServlet("/")
-public class IndexServlet extends HttpServlet {
+@WebServlet("/newUser")
+public class NewUserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IndexServlet() {
+    public NewUserServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,9 +28,16 @@ public class IndexServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("tool", new loginUser());
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/index.jsp");
+        // TODO Auto-generated method stub
+        /*int auth_id = (int) request.getSession().getAttribute("auth_id");
+        if(auth_id != 1){
+            RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/return.jsp");
+            rd.forward(request, response);
+        }*/
+
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/createUser.jsp");
         rd.forward(request, response);
+
     }
 
 }
