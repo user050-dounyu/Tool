@@ -25,7 +25,7 @@
                 <br /><br />
 
                 <label for="password">パスワード</label><br />
-                <input type="text" name="password" id="password" value="${tool.password}" />
+                <input type="password" name="password" id="password" value="${tool.password}" />
                 <br /><br />
 
                 <button type="submit">ログイン</button>

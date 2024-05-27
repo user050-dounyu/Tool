@@ -10,11 +10,12 @@
         <p>メイン画面です。</p>
         <br /><br />
 
-        <form method="GET" action="${pageContext.request.contextPath}/newUser}">
+        <form method="GET" action="${pageContext.request.contextPath}/newUser">
             <button type="submit">新規作成</button>
         </form>
+        <br /><br />
 
-        <form method="GET" action="${pageContext.request.contextPath}/logout}">
+        <form method="GET" action="${pageContext.request.contextPath}/logout">
             <button type="submit">ログアウト</button>
         </form>
 
