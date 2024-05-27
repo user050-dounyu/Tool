@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% String user_name = (String)request.getSession().getAttribute("user_name"); %>
+<% int auth_id = (int)request.getSession().getAttribute("auth_id"); %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
         <title>メイン画面</title>
@@ -9,11 +11,17 @@
     <header>
     <h1 id="bigTitle">トップページ</h1>
     <div id="userinfo">
+
         <div id="username">ログイン中のユーザ　<br />
 
-        <c:out value="${sessionScope.login_user.user_name}" />
+        <%= user_name %>
                     &nbsp;さん&nbsp;&nbsp;&nbsp;
         </div>
+        <% if(auth_id == 1){ %>
+            <form method="GET" action="${pageContext.request.contextPath}/newUser">
+                <button class="newuser" type="submit">新規ユーザ作成</button><br /><br />
+            </form>
+        <% } %>
         <button id="logout" type="submit"><a href="${pageContext.request.contextPath}/logout">ログアウト</a></button>
     </div>
     </header>
