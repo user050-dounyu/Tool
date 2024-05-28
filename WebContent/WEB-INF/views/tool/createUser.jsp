@@ -34,7 +34,7 @@
         </form>
 
         <br />
-        <form method="POST" action="${pageContext.request.contextPath}/main">
+        <form method="GET" action="${pageContext.request.contextPath}/main">
             <button type="submit">戻る</button>
         </form>
 

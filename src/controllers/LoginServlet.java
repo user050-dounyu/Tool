@@ -71,6 +71,10 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }catch(NoSuchAlgorithmException e) {
             e.printStackTrace();
+        }catch(NumberFormatException e) {
+            RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tool/err.jsp");
+            rd.forward(request, response);
+            e.printStackTrace();
         }
     }
 }
