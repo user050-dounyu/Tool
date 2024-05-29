@@ -6,6 +6,7 @@
     <c:param name="content">
         <title>メイン画面</title>
         <link rel="stylesheet" href="<c:url value='/css/main.css' />">
+        <link rel="stylesheet" href="<c:url value='/css/header.css' />">
     </head>
     <body>
     <header>

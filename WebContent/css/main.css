@@ -1,36 +1,5 @@
 @charset "UTF-8";
 
-header{
-    background: linear-gradient(to left, #003399, #00B3FE);
-    height:100px;
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#bigTitle{
-    color : white;
-    float:left;
-    margin-left:10px;
-    width:50%;
-    padding:  2%;
-}
-
-
-
-#userinfo{
-    width:50%;
-    float:right;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-
-#username{
-    margin-right:100px;
-    color:white;
-}
-
 #wrapper{
     overflow: hidden;
     display: flex;
