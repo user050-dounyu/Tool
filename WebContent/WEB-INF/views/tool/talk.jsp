@@ -34,7 +34,9 @@
             </c:forEach>
         </ul>
 
-        <p><a href="${pageContext.request.contextPath}/new">新規投稿</a></p>
+        <p><a href="${pageContext.request.contextPath}/new">新規投稿</a></p><br />
+
+        <p><a href="${pageContext.request.contextPath}/main">メイン画面に戻る</a></p>
 
     </body>
 

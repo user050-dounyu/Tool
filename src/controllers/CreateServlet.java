@@ -41,16 +41,16 @@ public class CreateServlet extends HttpServlet {
         String title = request.getParameter("title");
         String content = request.getParameter("content");
         int user_id = (int) request.getSession().getAttribute("user_id");
-        int category_id = Integer.parseInt(request.getParameter("category_id"));
-        int status_id = 0;
-        if(request.getParameter("status").equals("question")) {
+        int category_id = Integer.parseInt(request.getParameter("category"));
+        int status_id = 1;
+        /*if(request.getParameter("status").equals("question")) {
             status_id = 1;
         }else if(request.getParameter("status").equals("finish")){
             status_id = 2;
         }else {
             status_id = 3;
 
-        }
+        }*/
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
 
         m.setTitle(title);

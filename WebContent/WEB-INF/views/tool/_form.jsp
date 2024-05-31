@@ -9,7 +9,7 @@
 <br /><br />
 
 <label for="content_msg">カテゴリ（※最大300文字）</label><br />
-<select name="authentication">
+<select name="category">
     <option value="${message.getCategoryId()}" selected><c:out value="${message.getCategoryName()}"></c:out></option>
     <c:forEach var="category" items="${categorys}">
         <option value="${category.getCategoryId()}"><c:out value="${category.getCategoryName()}"></c:out></option>

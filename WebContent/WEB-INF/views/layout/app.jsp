@@ -19,8 +19,8 @@
             </div>
             <div id="footer">
                 by Katsuki Nagashima.
-                   Tathunori Suzuki.
-                   Yuta Hujioka.
+                   Tatsuhisa Suzuki.
+                   Yuta Fujioka.
             </div>
         </div>
     </body>
